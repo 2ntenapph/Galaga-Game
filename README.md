@@ -11,7 +11,7 @@ Extract the contents of the ZIP file to a directory of your choice.
 ### Running the game
 To run the game, open a terminal or command prompt and navigate to the directory containing the game files. Then, type the following command:
   
- 	java GalagaGame
+ 	java Galaga
   
 This will start the game and display the main menu.
 
