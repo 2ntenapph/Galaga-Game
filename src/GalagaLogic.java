@@ -2,6 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
+import java.util.Objects;
 
 /**
  * The GalagaLogic class is a JPanel that implements the MouseMotionListener and MouseListener interfaces.
@@ -86,14 +87,14 @@ public class GalagaLogic extends JPanel implements MouseMotionListener, MouseLis
         DataStorage dataStorage = (DataStorage) obj.readObject();
         name = dataStorage.playerName;
 
-        shipimg = new ImageIcon("Images/shipimg.png");
+        shipimg = new ImageIcon(Objects.requireNonNull(getClass().getResource("Images/shipimg.png")));
 
-        bg = new ImageIcon("Images/space.gif");
+        bg = new ImageIcon(Objects.requireNonNull(getClass().getResource("Images/space.gif")));
 
-        alien1Img = new ImageIcon("Images/alien1.png");
-        alien2Img = new ImageIcon("Images/alien2.png");
-        alien3Img = new ImageIcon("Images/alien3.png");
-        bulletImg = new ImageIcon("Images/bullet.png");
+        alien1Img = new ImageIcon(Objects.requireNonNull(getClass().getResource("Images/alien1.png")));
+        alien2Img = new ImageIcon(Objects.requireNonNull(getClass().getResource("Images/alien2.png")));
+        alien3Img = new ImageIcon(Objects.requireNonNull(getClass().getResource("Images/alien3.png")));
+        bulletImg = new ImageIcon(Objects.requireNonNull(getClass().getResource("Images/bullet.png")));
 
         bullet = new Bullet(0, 0, 10, 15, bulletImg,  false);
 

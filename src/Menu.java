@@ -1,6 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
 import java.io.*;
+import java.util.Objects;
 
 public class Menu extends JPanel {
     JButton  best, start, play, back;
@@ -12,7 +13,7 @@ public class Menu extends JPanel {
 
     Menu() {
 
-        bg = new ImageIcon("Images/space.gif");
+        bg = new ImageIcon(Objects.requireNonNull(getClass().getResource("Images/space.gif")));
 
         tf_name = new JTextField();
         tf_name.addActionListener(e -> name = tf_name.getText());
